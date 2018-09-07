@@ -1,0 +1,27 @@
+import './style.css';
+import printMe from './print';
+
+async function getComponents() {
+    const el = document.createElement('div');
+    const btn = document.createElement('button');
+    const _ = await import(/* webpackChunkName: "lodash" */ 'lodash');
+    el.innerHTML = _.join(['hello xlj','happy'], ' ~~ ');
+    el.classList.add('hello');
+    btn.innerHTML = 'click me';
+    btn.onclick = printMe;
+    el.appendChild(btn);
+    return el;
+}
+getComponents().then(component => {
+    document.body.appendChild(component);
+}); 
+
+
+if (module.hot) {
+    module.hot.accept('./print.js', function() {
+        document.body.removeChild(element);
+        getComponents().then(component => {
+            document.body.appendChild(component);
+        }); 
+    })
+}

@@ -1,6 +1,6 @@
-# 验证Source Map类型的demo
+# 验证webpack中devtool属性值的demo
 
-本项目作为快速验证Source Map类型的demo，可以在config/webpack.prod.js中设置devtool属性的值，观察打包之后的文件。使用Source Map方便线上debug，更多研究移步[深入理解Source Map](http://goddess.joeray61.com/2018/09/06/source-map/#more)。
+本项目作为快速验证webpack中devtool属性值的demo，可以在config/webpack.prod.js中设置devtool属性的值，观察打包之后的文件。使用Source Map方便线上debug，更多研究移步[深入理解Source Map](http://goddess.joeray61.com/2018/09/06/source-map/#more)。
 
 ## 使用
 
